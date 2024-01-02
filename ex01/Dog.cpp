@@ -6,7 +6,7 @@
 /*   By: kichlee <kichlee@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/02 12:05:12 by kichlee           #+#    #+#             */
-/*   Updated: 2024/01/02 13:13:21 by kichlee          ###   ########.fr       */
+/*   Updated: 2024/01/02 13:53:48 by kichlee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,10 @@ Dog::~Dog() {
   std::cout << "Dog desctructor called" << std::endl;
 }
 
-Dog::Dog(const Dog& ref) {
+Dog::Dog(const Dog& rhs) : Animal(rhs) {
   std::cout << "Dog Copy constructor called" << std::endl;
   this->bp = new Brain();
-  *this = ref;
+  *this = rhs;
 }
 
 Dog& Dog::operator=(const Dog& rhs) {

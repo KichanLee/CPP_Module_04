@@ -6,7 +6,7 @@
 /*   By: kichlee <kichlee@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/27 18:58:07 by kichan            #+#    #+#             */
-/*   Updated: 2024/01/02 12:30:09 by kichlee          ###   ########.fr       */
+/*   Updated: 2024/01/02 13:46:45 by kichlee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,18 +22,18 @@ Cat::~Cat() {
   std::cout << "Cat desctructor called" << std::endl;
 }
 
-Cat::Cat(const Cat& ref) {
+Cat::Cat(const Cat& rhs) : Animal(rhs) {
   std::cout << "Cat Copy constructor called" << std::endl;
   this->bp = new Brain();
-  *this = ref;
+  *this = rhs;
 }
 
-Cat& Cat::operator=(const Cat& ref) {
+Cat& Cat::operator=(const Cat& rhs) {
   std::cout << "Cat Copy assignment constructor called" << std::endl;
-  if (this != &ref) {
-    this->type = ref.type;
+  if (this != &rhs) {
+    this->type = rhs.type;
     if (this->bp) delete this->bp;
-    this->bp = new Brain(*ref.bp);
+    this->bp = new Brain(*rhs.bp);
   }
   return *this;
 }
