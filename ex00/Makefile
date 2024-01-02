@@ -6,6 +6,8 @@ RM			=	rm -rf
 SRCS		=	Animal.cpp \
 				Cat.cpp \
 				Dog.cpp \
+				WrongCat.cpp \
+				WrongAnimal.cpp \
 				main.cpp
 OBJS		=	${SRCS:.c=.o}
 

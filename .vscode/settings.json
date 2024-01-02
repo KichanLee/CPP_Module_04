@@ -54,6 +54,17 @@
         "ratio": "cpp",
         "stdexcept": "cpp",
         "typeinfo": "cpp",
-        "algorithm": "cpp"
+        "algorithm": "cpp",
+        "__functional_base": "cpp",
+        "__nullptr": "cpp",
+        "__string": "cpp",
+        "__tuple": "cpp",
+        "bit": "cpp",
+        "chrono": "cpp",
+        "functional": "cpp",
+        "memory": "cpp",
+        "type_traits": "cpp",
+        "utility": "cpp",
+        "__functional_03": "cpp"
     }
 }
