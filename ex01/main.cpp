@@ -6,7 +6,7 @@
 /*   By: kichlee <kichlee@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/02 12:12:57 by kichlee           #+#    #+#             */
-/*   Updated: 2024/01/02 14:25:13 by kichlee          ###   ########.fr       */
+/*   Updated: 2024/01/02 15:14:16 by kichlee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,31 +15,32 @@
 #include "Dog.hpp"
 
 int main() {
-  // const Animal* j = new Dog();
-  // const Animal* i = new Cat();
+  const Animal* j = new Dog();
+  const Animal* i = new Cat();
 
-  // delete j;
-  // delete i;
+  delete j;
+  delete i;
 
-  // Animal* animal[6];
+  Animal* animal[100];
 
-  // for (int cnt = 0; cnt < 3; ++cnt) {
-  //   animal[cnt] = new Dog;
-  //   animal[cnt + 3] = new Cat;
-  // }
+  for (int cnt = 0; cnt < 50; ++cnt) animal[cnt] = new Dog;
 
-  // std::cout << std::endl;
+  for (int cnt = 50; cnt < 100; ++cnt) animal[cnt] = new Cat;
 
-  // for (int cnt = 0; cnt < 3; ++cnt) {
-  //   if (animal[cnt]) {
-  //     animal[cnt]->makeSound();
-  //     delete animal[cnt];
-  //   }
-  //   if (animal[cnt + 3]) {
-  //     animal[cnt + 3]->makeSound();
-  //     delete animal[cnt + 3];
-  //   }
-  // }
+  std::cout << std::endl;
+
+  for (int cnt = 0; cnt < 50; ++cnt) {
+    if (animal[cnt]) {
+      animal[cnt]->makeSound();
+      delete animal[cnt];
+    }
+  }
+  for (int cnt = 50; cnt < 100; ++cnt) {
+    if (animal[cnt]) {
+      animal[cnt]->makeSound();
+      delete animal[cnt];
+    }
+  }
 
   std::cout << std::endl;
 
