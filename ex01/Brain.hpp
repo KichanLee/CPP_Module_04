@@ -6,7 +6,7 @@
 /*   By: kichlee <kichlee@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/02 11:08:59 by kichlee           #+#    #+#             */
-/*   Updated: 2024/01/02 11:40:51 by kichlee          ###   ########.fr       */
+/*   Updated: 2024/01/02 14:04:27 by kichlee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@ class Brain {
   ~Brain();
   Brain(const Brain &rhs);
   Brain &operator=(const Brain &rhs);
-  void modify_ideas(std::string name);
 };
 
 #endif

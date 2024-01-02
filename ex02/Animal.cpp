@@ -6,7 +6,7 @@
 /*   By: kichlee <kichlee@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/28 17:06:46 by kichan            #+#    #+#             */
-/*   Updated: 2024/01/02 10:50:27 by kichlee          ###   ########.fr       */
+/*   Updated: 2024/01/02 14:27:51 by kichlee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,4 @@ Animal &Animal::operator=(const Animal &rhs) {
   if (this != &rhs) this->type = rhs.type;
   return (*this);
 }
-void Animal::makeSound() const { std::cout << "umma~~~" << std::endl; }
 std::string Animal::getType() const { return type; }

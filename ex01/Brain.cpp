@@ -6,7 +6,7 @@
 /*   By: kichlee <kichlee@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/02 11:08:53 by kichlee           #+#    #+#             */
-/*   Updated: 2024/01/02 12:12:45 by kichlee          ###   ########.fr       */
+/*   Updated: 2024/01/02 14:04:24 by kichlee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,4 @@ Brain &Brain::operator=(const Brain &rhs) {
     for (int i = 0; i < 100; ++i) this->ideas[i] = rhs.ideas[i];
   }
   return (*this);
-}
-
-void Brain::modify_ideas(std::string name) {
-  for (int i = 0; i < 100; ++i) this->ideas[i] = name;
 }

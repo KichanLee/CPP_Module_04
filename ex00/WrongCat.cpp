@@ -6,7 +6,7 @@
 /*   By: kichlee <kichlee@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/02 09:55:50 by kichlee           #+#    #+#             */
-/*   Updated: 2024/01/02 10:14:47 by kichlee          ###   ########.fr       */
+/*   Updated: 2024/01/02 13:56:52 by kichlee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ WrongCat::WrongCat() {
   type = "WrongCat";
 };
 WrongCat::~WrongCat() { std::cout << "WrongCat Destructor Call\n"; };
-WrongCat::WrongCat(const WrongCat &rhs) {
+WrongCat::WrongCat(const WrongCat &rhs) : WrongAnimal(rhs) {
   if (this != &rhs) *this = rhs;
   std::cout << "WrongCat Copy Constructor Call\n";
 }

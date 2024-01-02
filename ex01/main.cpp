@@ -6,7 +6,7 @@
 /*   By: kichlee <kichlee@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/02 12:12:57 by kichlee           #+#    #+#             */
-/*   Updated: 2024/01/02 12:54:05 by kichlee          ###   ########.fr       */
+/*   Updated: 2024/01/02 14:25:13 by kichlee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ int main() {
   //   }
   // }
 
-  // std::cout << std::endl;
+  std::cout << std::endl;
 
   Dog dog;
   Dog dog_cpy;
@@ -65,12 +65,9 @@ int main() {
   std::cout << dog_cpy.getBrain(1) << std::endl;
 
   std::cout << "\ntest ends\n";
-  // std::cout << std::endl;
+  std::cout << std::endl;
 
-  // dog.printIdeas();
-  // dog_cpy.printIdeas();
-
-  // std::cout << std::endl;
+  std::cout << std::endl;
 
   return 0;
 }

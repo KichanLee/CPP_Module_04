@@ -6,7 +6,7 @@
 /*   By: kichlee <kichlee@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/27 18:40:46 by kichan            #+#    #+#             */
-/*   Updated: 2024/01/02 10:01:16 by kichlee          ###   ########.fr       */
+/*   Updated: 2024/01/02 14:00:05 by kichlee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ class WrongAnimal {
 
  public:
   WrongAnimal();
-  ~WrongAnimal();
+  virtual ~WrongAnimal();
   WrongAnimal(const WrongAnimal& rhs);
   WrongAnimal& operator=(const WrongAnimal& rhs);
   WrongAnimal(std::string get_name);

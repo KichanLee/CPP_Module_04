@@ -6,7 +6,7 @@
 /*   By: kichlee <kichlee@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/27 18:57:31 by kichan            #+#    #+#             */
-/*   Updated: 2024/01/02 12:36:19 by kichlee          ###   ########.fr       */
+/*   Updated: 2024/01/02 14:25:20 by kichlee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ class Dog : public Animal {
 
  public:
   Dog();
-  virtual ~Dog();
+  ~Dog();
   Dog(const Dog &rhs);
   Dog &operator=(const Dog &rhs);
   void makeSound() const;

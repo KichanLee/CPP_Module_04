@@ -6,7 +6,7 @@
 /*   By: kichlee <kichlee@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/27 18:58:07 by kichan            #+#    #+#             */
-/*   Updated: 2024/01/02 12:30:09 by kichlee          ###   ########.fr       */
+/*   Updated: 2024/01/02 13:58:46 by kichlee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ Cat::~Cat() {
   std::cout << "Cat desctructor called" << std::endl;
 }
 
-Cat::Cat(const Cat& ref) {
+Cat::Cat(const Cat& ref) : Animal(ref) {
   std::cout << "Cat Copy constructor called" << std::endl;
   this->bp = new Brain();
   *this = ref;

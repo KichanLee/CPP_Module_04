@@ -6,7 +6,7 @@
 /*   By: kichlee <kichlee@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/27 18:58:00 by kichan            #+#    #+#             */
-/*   Updated: 2024/01/02 13:35:21 by kichlee          ###   ########.fr       */
+/*   Updated: 2024/01/02 14:08:32 by kichlee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,4 @@ Dog& Dog::operator=(const Dog& rhs) {
   return *this;
 }
 
-void Dog::makeSound() const {
-  std::cout << this->type << " wal wal" << std::endl;
-}
+void Dog::makeSound() const { std::cout << " wal wal" << std::endl; }
