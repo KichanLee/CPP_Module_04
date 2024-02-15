@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Interfaces don’t exist in C++98 (not even in C++20). However, pure abstract classes
 are commonly called interfaces. Thus, in this last exercise, 
 let’s try to implement interfaces in order to make sure you got this module.
@@ -8,6 +9,16 @@ C++98에서 (심지어 C++20에서도) 인터페이스는 존재하지 않습니
 그러므로, 이 마지막 연습에서는 이 모듈을 이해했는지 확인하기 위해 인터페이스를 구현해 보겠습니다.
 다음 AMateria 클래스의 정의를 완성하고 필요한 멤버 함수를 구현하세요.
 
+=======
+Interfaces don’t exist in C++98 (not even in C++20). 
+C++98에는 인터페이스가 존재하지 않습니다(심지어 C++20에도 존재하지 않습니다).
+However, pure abstract classes are commonly called interfaces. 
+하지만 순수 추상 클래스는 일반적으로 인터페이스라고 부릅니다. 
+Thus, in this last exercise, let’s try to implement interfaces in order to make sure you got this module.
+따라서 이번 마지막 연습에서는 이 모듈을 이해하기 위해 인터페이스를 구현해 보겠습니다.
+Complete the definition of the following AMateria class and implement the necessary member functions.
+다음 AMateria 클래스의 정의를 완성하고 필요한 멤버 함수를 구현하세요.
+>>>>>>> 823b2866bc2685447266f9b2993c472e4c51eccc
 class AMateria
 {
 protected:
@@ -20,9 +31,14 @@ virtual AMateria* clone() const = 0;
 virtual void use(ICharacter& target);
 };
 
+<<<<<<< HEAD
 Implement the Materias concrete classes Ice and Cure. 
 Use their name in lowercase ("ice" for Ice, "cure" for Cure) to set their types. 
 Of course, their member function
+=======
+C++ - Module 04 Subtype polymorphism, abstract classes, interfaces
+Implement the Materias concrete classes Ice and Cure. Use their name in lowercase ("ice" for Ice, "cure" for Cure) to set their types. Of course, their member function
+>>>>>>> 823b2866bc2685447266f9b2993c472e4c51eccc
 clone() will return a new instance of the same type (i.e., if you clone an Ice Materia,
 you will get a new Ice Materia).
 
