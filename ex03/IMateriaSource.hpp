@@ -1,6 +1,10 @@
 #ifndef __IMATERIATSOURCE_HPP
 #define __IMATERIATSOURCE_HPP
 
+#include <iostream>
+#include <string>
+class AMateria;
+
 class IMateriaSource {
  public:
   virtual ~IMateriaSource() {}

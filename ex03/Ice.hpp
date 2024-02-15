@@ -1,16 +1,19 @@
 #ifndef __ICE_HPP
 #define __ICE_HPP
 
-class Ice {
+#include "AMateria.hpp"
+
+class Ice : protected AMateria {
  private:
-  /* data */
+  std::string _type;
+
  public:
-  Ice(/* args */);
+  Ice();
+  Ice(const Ice& rhs);
+  Ice& operator=(const Ice& rhs);
   ~Ice();
+  void use(ICharacter& target);
+  Ice* clone() const;
 };
-
-Ice::Ice(/* args */) {}
-
-Ice::~Ice() {}
 
 #endif
