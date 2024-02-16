@@ -5,9 +5,10 @@
 
 class MateriaSource : public IMateriaSource {
  private:
-  /* data */
+  AMateria* inventory[4];
+
  public:
-  MateriaSource(/* args */);
+  MateriaSource();
   MateriaSource(const MateriaSource& rhs);
   MateriaSource& operator=(const MateriaSource& rhs);
   ~MateriaSource();
