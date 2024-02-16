@@ -1,5 +1,5 @@
-#ifndef __ICE_HPP
-#define __ICE_HPP
+#ifndef __ICE_HPP_
+#define __ICE_HPP_
 
 #include "AMateria.hpp"
 
