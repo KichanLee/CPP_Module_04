@@ -1,13 +1,16 @@
 #include "Cure.hpp"
 
-Cure::Cure() : _type("ice") { std::cout << "Default Constructor" << std::endl; }
-Cure::Cure(const Cure& rhs) { std::cout << "Copy Constructor" << std::endl; }
-Cure& Cure::operator=(const Cure& rhs) {
-  std::cout << "Copy Assignment Operator" << std::endl;
-}
-Cure::~Cure() { std::cout << "Destructor Call" << std::endl; }
+Cure::Cure() : AMateria("cure") {}
+Cure::Cure(const Cure &rhs) : AMateria("cure") { *this = rhs; }
+Cure &Cure::operator=(const Cure &rhs) {
+  if (this != &rhs) this->_type = rhs._type;
 
-void Cure::use(ICharacter& target) {
-  std::cout << "shoots an Cure bolt at " << target.getName() << std::endl;
+  return (*this);
 }
-Cure* Cure::clone() const { return (new Cure(*this)); }
+Cure::~Cure() {}
+
+Cure *Cure::clone() const { return (new Cure(*this)); }
+
+void Cure::use(ICharacter &target) {
+  std::cout << "* heals " << target.getName() << "'s wounds *" << std::endl;
+}

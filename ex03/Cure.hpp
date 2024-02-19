@@ -3,7 +3,7 @@
 
 #include "AMateria.hpp"
 
-class Cure : protected AMateria {
+class Cure : public AMateria {
  private:
   std::string _type;
 

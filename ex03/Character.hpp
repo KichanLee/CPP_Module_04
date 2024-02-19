@@ -3,11 +3,14 @@
 
 class AMateria;
 
+#include "AMateria.hpp"
 #include "ICharacter.hpp"
 
-class Character : protected ICharacter {
+class Character : public ICharacter {
  private:
   Character();
+  AMateria* slot[4];
+  std::string _name;
 
  public:
   Character(std::string name);

@@ -1,43 +1,34 @@
 #include "MateriaSource.hpp"
 
+#include "Cure.hpp"
+#include "Ice.hpp"
+
 MateriaSource::MateriaSource() {
-  std::cout << "Default Constructor" << std::endl;
+  for (int i = 0; i < 4; ++i) this->inventory[i] = NULL;
 }
 
-MateriaSource::MateriaSource(const MateriaSource& rhs) {
-  std::cout << "Copy Constructor" << std::endl;
-}
+MateriaSource::MateriaSource(const MateriaSource& rhs) { *this = rhs; }
 
 MateriaSource& MateriaSource::operator=(const MateriaSource& rhs) {
-  std::cout << "Copy Operator Constructor" << std::endl;
+  if (this != &rhs) {
+  }
+  return (*this);
 }
 
-MateriaSource::~MateriaSource() { std::cout << "Destructor Call" << std::endl; }
+MateriaSource::~MateriaSource() {
+  for (int i = 0; i < 4; ++i) delete this->inventory[i];
+}
 void MateriaSource::learnMateria(AMateria* M) {
   for (int i = 0; i < 4; ++i) {
-    if (this->inventory[i] == NULL) inventory[i] = M;
+    if (this->inventory[i] == NULL) inventory[i] = M->clone();
   }
 }
 
 AMateria* MateriaSource::createMateria(std::string const& type) {
-  for (int i = 0; i < 4; ++i) {
-    if (this->inventory[i] != NULL && this->inventory[i]->getType() == type)
-      return this->inventory[i]->clone();
-  }
-  return (NULL);
+  if (type == "ice")
+    return new Ice();
+  else if (type == "cure")
+    return new Cure();
+  else
+    return NULL;
 }
-
-/**
- *
-   AMateria* createMateria(std::string const & type) override {
-       for (auto& materia : materias) {
-           if (materia != nullptr && materia->getType() == type) {
-               return materia->clone();
-           }
-       }
-       return nullptr;
-   }
- *
- *
- *
-*/
